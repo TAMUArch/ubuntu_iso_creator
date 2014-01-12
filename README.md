@@ -1,4 +1,4 @@
-vmware_template
+VMWare Template
 ===============
 
-Scripts to build base template for Ubuntu Server
+Stuff used to build a basic vmware template in CIS Cloud
