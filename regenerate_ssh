@@ -1,9 +1,0 @@
-#!/bin/bash
-
-KEYS="rsa dsa"
-
-for KEY in $KEYS
-do
-  rm /etc/ssh/ssh_host_${KEY}_key
-  ssh-keygen -f /etc/ssh/ssh_host_${KEY}_key -N '' -t $KEY
-done
