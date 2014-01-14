@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "Regenerating host keys"
 KEYS="rsa dsa"
 
@@ -9,8 +7,10 @@ do
   ssh-keygen -f /etc/ssh/ssh_host_${KEY}_key -N '' -t $KEY
 done
 
-echo "Upgrading to latest software..."
+echo "Upgrading system"
 apt-get update && apt-get dist-upgrade -y
 
-echo "Cleaning up self"
-rm /etc/rc2.d/s99bootstrap
+echo "Cleaning up"
+rm /etc/rc2.d/S99bootstrap
+mv /etc/S99chefbootstrap /etc/rc2.d/S99chefbootstrap
+reboot
