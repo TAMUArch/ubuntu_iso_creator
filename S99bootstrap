@@ -12,5 +12,8 @@ apt-get update && apt-get dist-upgrade -y
 
 echo "Cleaning up"
 rm /etc/rc2.d/S99bootstrap
-mv /etc/S99chefbootstrap /etc/rc2.d/S99chefbootstrap
+mv /etc/S99chefbootstrap /etc/rc2.d/S99bootstrap
+mkdir /etc/chef
+wget http://pxe1.arch-internal/client.rb -P /etc/chef
+wget http://pxe1.arch-internal/validation.pem -P /etc/chef
 reboot
