@@ -1,9 +1,6 @@
+# Sleep to give time to view terminal
 echo "Sleeping .."
 sleep 10
-
-echo "Setting time .."
-ntpdate ntp1.tamu.edu
-sleep 5
 
 echo "Automate all the things .."
 /usr/bin/chef-client
