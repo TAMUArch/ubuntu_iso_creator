@@ -7,7 +7,7 @@ ISO_ALTNAME=UbuntuServer.iso
 
 if [ ! -f ${ISO_NAME} ]
 then
-  echo "Image not found will download"
+  echo "Image not found beginning download"
   wget $ISO_URL
   DL_MD5SUM=`md5sum $ISO_NAME | awk '{print $1}'`
   if [ $DL_MD5SUM != $ISO_MD5SUM ]
