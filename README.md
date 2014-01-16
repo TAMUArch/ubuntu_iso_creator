@@ -1,6 +1,9 @@
 VMWare Template
 ===============
 
+Using these generated cd's require that you have a web server
+serving the bootstrap files.
+
 Random stuffs to build a custom Ubuntu iso inside a vagrant box.
 
 ```bash

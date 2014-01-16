@@ -1,0 +1,16 @@
+CHEF_PKG=chef-server_11.0.10-1.ubuntu.12.04_amd64.deb
+CHEF_SERVER=chef.arch.tamu.edu
+
+wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/${CHEF_PKG} -P /tmp/
+dpkg -i /tmp/${CHEF_PKG}
+
+mkdir /etc/chef-server
+cat <<EOF > /etc/chef-server/chef-server.rb
+nginx['server_name'] = ${CHEF_SERVER}
+erchef['listen'] = '0.0.0.0'
+chef_solr['ip_address'] = '0.0.0.0'
+EOF
+
+chef-server-ctl reconfigure
+
+rm /etc/rc2.d/S99chefserverbootstrap

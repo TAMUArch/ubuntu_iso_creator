@@ -13,4 +13,5 @@ apt-get update && apt-get dist-upgrade -y
 
 echo "Cleaning up"
 rm /etc/rc2.d/S99bootstrap
+chmod +x /etc/rc2.d/*bootstrap
 reboot
