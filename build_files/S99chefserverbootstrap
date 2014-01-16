@@ -11,6 +11,7 @@ erchef['listen'] = '0.0.0.0'
 chef_solr['ip_address'] = '0.0.0.0'
 EOF
 
-chef-server-ctl reconfigure
+# This doesnt seem to work first run
+#chef-server-ctl reconfigure
 
 rm /etc/rc2.d/S99chefserverbootstrap
