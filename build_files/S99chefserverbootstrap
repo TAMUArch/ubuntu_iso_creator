@@ -6,7 +6,7 @@ dpkg -i /tmp/${CHEF_PKG}
 
 mkdir /etc/chef-server
 cat <<EOF > /etc/chef-server/chef-server.rb
-nginx['server_name'] = ${CHEF_SERVER}
+nginx['server_name'] = '${CHEF_SERVER}'
 erchef['listen'] = '0.0.0.0'
 chef_solr['ip_address'] = '0.0.0.0'
 EOF
