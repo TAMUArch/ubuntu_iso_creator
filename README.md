@@ -17,6 +17,13 @@ sudo su
 
 Currently only has seed file for installing Ubuntu with Chef 11.8.
 
+Vagrant
+-------
+
+Why does this require vagrant to work?  Using Vagrant to build the iso
+ensures a consistent environment to run the appropriate steps.  Also I
+run Fedora as my primary desktop sooo there is that too.
+
 TODO
 ----
 * Would be nice if you could pass parameters to drop in bootstrap files
