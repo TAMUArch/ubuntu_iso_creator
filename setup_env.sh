@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ISO_NAME=ubuntu-12.04.3-server-amd64.iso
-ISO_URL=http://releases.ubuntu.com/12.04.3/${ISO_NAME}
-ISO_MD5SUM=2cbe868812a871242cdcdd8f2fd6feb9
+ISO_NAME=ubuntu-12.04.4-server-amd64.iso
+ISO_URL=http://releases.ubuntu.com/12.04/${ISO_NAME}
+ISO_MD5SUM=e83adb9af4ec0a039e6a5c6e145a34de
 ISO_ALTNAME=UbuntuServer.iso
 
 if [ ! -f ${ISO_NAME} ]
